@@ -25,3 +25,12 @@ that leaves then:
 aisolating pi, we end up with:
     \pi = 4 * (points inside) / (total points)
 
+# Notes
+As more points are considered more accurate the estimation will be
+
+# Runing the program
+first install all the requirements
+`pip install -r requirements.txt`
+
+then run the streamlit dashboard
+`streamlit run estimate.py`
