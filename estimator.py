@@ -15,7 +15,7 @@ def estimate_pi(num_points:int):
         points_x.append(x)
         points_y.append(y)
         
-        if sqrt(x**2+y**2) < 1:
+        if x**2+y**2 < 1:
             inside_points.append((x,y))
         
     
@@ -30,8 +30,7 @@ def estimate_pi(num_points:int):
             ax.plot((points_x[i]),(points_y[i]),'o', color='black')
             
     st.pyplot(plt.show())
-
-    
+    st.text('Pi approximation:'+str(4*len(inside_points)/len(points_x)))   
 num = st.number_input('Number of Points', value=1.)    
 if st.button('Estimate'):
     estimate_pi(int(num))
